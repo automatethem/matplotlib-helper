@@ -91,15 +91,4 @@ def draw_point(image, point):
     plt.yticks([])
     plt.show()
 
-##
-def draw_image(image, image_to_draw, point):
-    alpha_range = image_to_draw.getextrema()[-1]
-    print(alpha_range)
-    if alpha_range == (0, 255):
-        image.paste(image_to_draw, point, mask=image_to_draw)
-    else:
-        image.paste(image_to_draw, point)
-
-    return image
-
 #plt.savefig('image.png')
