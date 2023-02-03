@@ -22,8 +22,7 @@ def draw_rect(point1, point2):
     #fig, ax = plt.subplots(nrows=1, ncols=1)
     fig = plt.gcf()
     ax = plt.gca()
-    plt.imshow(image목
-    plt.title('제목')
+    plt.imshow(image)
     ax.add_patch(
         patches.Rectangle(
             (0, 0), 200, 100,
@@ -39,8 +38,7 @@ def draw_label(text, point, font_color=(255, 255, 255), font_size=28):
     #fig, ax = plt.subplots(nrows=1, ncols=1)
     fig = plt.gcf()
     ax = plt.gca()
-    plt.imshow(image목
-    plt.title('제목')
+    plt.imshow(image)
     ax.text(200, 200, '텍스트1')
 
 def draw_rect_with_label(point1, point2, text, font_color=(255, 255, 255), font_size=28):
