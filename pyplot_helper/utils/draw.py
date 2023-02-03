@@ -32,6 +32,9 @@ def draw_rect(point1, point2):
             fill=False
         )
     )
+    plt.xticks([])
+    plt.yticks([])
+    plt.show()
 
 def draw_label(text, point, font_color=(255, 255, 255), font_size=28):
     plt.figure(figsize=(16, 10))
@@ -40,6 +43,9 @@ def draw_label(text, point, font_color=(255, 255, 255), font_size=28):
     ax = plt.gca()
     plt.imshow(image)
     ax.text(200, 200, '텍스트1')
+    plt.xticks([])
+    plt.yticks([])
+    plt.show()
 
 def draw_rect_with_label(point1, point2, text, font_color=(255, 255, 255), font_size=28):
     plt.figure(figsize=(16, 10))
@@ -66,8 +72,19 @@ def draw_point(point):
     #fig, ax = plt.subplots(nrows=1, ncols=1)
     fig = plt.gcf()
     ax = plt.gca()
-    plt.imshow(image목
-    plt.title('제목')
+    plt.imshow(image)
+    ax.add_patch(
+        patches.Circle(
+            (400, 400),
+            edgecolor='red',
+            facecolor='red',
+            linewidth=2,
+            fill=True
+        )
+    )
+    plt.xticks([])
+    plt.yticks([])
+    plt.show()
 
 ##
 def draw_image(image, image_to_draw, point):
