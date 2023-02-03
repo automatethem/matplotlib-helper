@@ -23,9 +23,11 @@ def draw_rect(image, point1, point2):
     fig = plt.gcf()
     ax = plt.gca()
     plt.imshow(image)
+    x1, y1 = point1
+    x2, y2 = point2
     ax.add_patch(
         patches.Rectangle(
-            (0, 0), 200, 100,
+            (x1, y1), x2 - x1, y2 - y1,
             edgecolor='red',
             facecolor='red',
             linewidth=2,
@@ -42,7 +44,8 @@ def draw_label(image, text, point, font_color=(255, 255, 255), font_size=28):
     fig = plt.gcf()
     ax = plt.gca()
     plt.imshow(image)
-    ax.text(200, 200, '텍스트1')
+    x, y = point
+    ax.text(x, y, text)
     plt.xticks([])
     plt.yticks([])
     plt.show()
@@ -53,10 +56,11 @@ def draw_rect_with_label(image, point1, point2, text, font_color=(255, 255, 255)
     fig = plt.gcf()
     ax = plt.gca()
     plt.imshow(image)
-    x, y, width, height = bbox
+    x1, y1 = point1
+    x2, y2 = point2
     ax.add_patch(
         patches.Rectangle(
-            (x, y), width, height,
+            (x1, y1), x2 - x1, y2 - y1,
             edgecolor='red',
             facecolor='red',
             linewidth=2,
@@ -73,9 +77,10 @@ def draw_point(image, point):
     fig = plt.gcf()
     ax = plt.gca()
     plt.imshow(image)
+    x, y = point
     ax.add_patch(
         patches.Circle(
-            (400, 400),
+            (x, y),
             edgecolor='red',
             facecolor='red',
             linewidth=2,
