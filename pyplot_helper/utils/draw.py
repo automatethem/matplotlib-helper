@@ -79,3 +79,5 @@ def draw_image(image, image_to_draw, point):
         image.paste(image_to_draw, point)
 
     return image
+
+#plt.savefig('image.png')
