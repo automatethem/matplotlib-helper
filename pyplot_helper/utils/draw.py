@@ -17,7 +17,7 @@ elif platform.system() == 'Linux': #리눅스 (구글 콜랩)
 plt.rcParams['axes.unicode_minus'] = False #한글 폰트 사용시 마이너스 폰트 깨짐 해결
 #matplotlib 패키지 한글 깨짐 처리 끝
 
-def draw_rect(point1, point2):
+def draw_rect(image, point1, point2):
     plt.figure(figsize=(16, 10))
     #fig, ax = plt.subplots(nrows=1, ncols=1)
     fig = plt.gcf()
@@ -36,7 +36,7 @@ def draw_rect(point1, point2):
     plt.yticks([])
     plt.show()
 
-def draw_label(text, point, font_color=(255, 255, 255), font_size=28):
+def draw_label(image, text, point, font_color=(255, 255, 255), font_size=28):
     plt.figure(figsize=(16, 10))
     #fig, ax = plt.subplots(nrows=1, ncols=1)
     fig = plt.gcf()
@@ -47,7 +47,7 @@ def draw_label(text, point, font_color=(255, 255, 255), font_size=28):
     plt.yticks([])
     plt.show()
 
-def draw_rect_with_label(point1, point2, text, font_color=(255, 255, 255), font_size=28):
+def draw_rect_with_label(image, point1, point2, text, font_color=(255, 255, 255), font_size=28):
     plt.figure(figsize=(16, 10))
     #fig, ax = plt.subplots(nrows=1, ncols=1)
     fig = plt.gcf()
@@ -67,7 +67,7 @@ def draw_rect_with_label(point1, point2, text, font_color=(255, 255, 255), font_
     plt.yticks([])
     plt.show()
 
-def draw_point(point):
+def draw_point(image, point):
     plt.figure(figsize=(16, 10))
     #fig, ax = plt.subplots(nrows=1, ncols=1)
     fig = plt.gcf()
