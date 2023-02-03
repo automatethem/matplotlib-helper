@@ -1,12 +1,12 @@
 from . import draw
 
 '''
-import pil_helper
-pil_helper.utils.draw_rect
-pil_helper.utils.draw_label
-pil_helper.utils.draw_rect_with_label
-pil_helper.utils.draw_point
-pil_helper.utils.draw_image
+import pyplot_helper
+pyplot_helper.utils.draw_rect
+pyplot_helper.utils.draw_label
+pyplot_helper.utils.draw_rect_with_label
+pyplot_helper.utils.draw_point
+pyplot_helper.utils.draw_image
 '''
 
 from .draw import draw_rect
